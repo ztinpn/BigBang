@@ -1,7 +1,7 @@
 # Big Bang
 
 #动机
-纯属娱乐。
+看完锤子科技2016年发布会后想的，纯属娱乐。
 
 #功能
 分词，搜索
@@ -18,5 +18,5 @@
 5. 分词结果中，可按住鼠标左键滑动进行选择，也可以单独点击单个分词；
 6. 点击左上角的放大镜，即可对所选分词构成的句子进行搜索。
 
-![效果](https://raw.githubusercontent.com/ztinpn/BigBang/master/sample.jpg "效果")
+![效果](https://raw.githubusercontent.com/ztinpn/BigBang/391f69a2a305cd7750cef537265d1e6d79b188e1/sample.jpg "效果")
 
