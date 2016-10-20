@@ -108,7 +108,7 @@ function initFun()
 							maxInd = parseInt($(this).attr("ind"));
 					}
 
-					if(firstInd == -1){
+					if(firstInd == -1){ 
 						firstInd = parseInt($(this).attr("ind"));
 						$("#bb_search_a").show();
 					}
