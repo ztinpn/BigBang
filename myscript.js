@@ -29,9 +29,10 @@ function initFun()
 		  maxInd = -1;
 		  
 	};
-
+	var srcElement = null;
 	document.body.onmousedown = function(e){
 		if(e.button ==0){
+			srcElement = e.srcElement;
 			ctrlPressed = true;
 		}
 	}
@@ -100,7 +101,9 @@ function initFun()
 
 			$("span.big_bang_span").mousemove(function(){
 				if(ctrlPressed){
-					$(this).addClass("normal_state");
+					if(this != srcElement){
+						$(this).addClass("normal_state");
+					}
 					if(maxInd < parseInt($(this).attr("ind"))){
 							maxInd = parseInt($(this).attr("ind"));
 					}
