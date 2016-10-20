@@ -40,7 +40,7 @@ function initFun()
 
 
 
-	var baseURL = "http://bosonnlp.com/analysis/tag";
+	var baseURL = document.baseURI.split("://")[0] + "://bosonnlp.com/analysis/tag";
 
 	var div = document.createElement("div");
 	div.id = "big_bang_div";
@@ -66,7 +66,7 @@ function initFun()
 	//div_inner.innerHTML = text +"<input type='button' value='搜索' id='search'/>";
 	$("#bb_search_a").click(function(){
 		var text = $(".normal_state").text();
-		window.open("https://www.google.com.hk/?gws_rd=cr,ssl#newwindow=1&q=" + encodeURIComponent(text));
+		window.open("https://www.baidu.com/s?wd=" + encodeURIComponent(text));
 	});
 
 	var div_inner = document.createElement("div");
