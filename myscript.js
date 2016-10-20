@@ -15,33 +15,35 @@ function initFun()
 	var ctrlPressed = false;
 	var firstInd = -1;
 	var maxInd = -1;
-	document.onkeydown=function(event){
+	$(document)
+	.keydown(function(event){
 		  var e = event || window.event || arguments.callee.caller.arguments[0];
 		  if(e && e.keyCode==17){ // 按 Esc 
 		    	ctrlPressed = true;
 		   }
 		  
-	}; 
-	document.onkeyup=function(event){
+	})
+	.keyup(function(event){
 		  var e = event || window.event || arguments.callee.caller.arguments[0];
 		  ctrlPressed = false;
 		  firstInd = -1;
 		  maxInd = -1;
 		  
-	};
+	});
 	var srcElement = null;
-	document.body.onmousedown = function(e){
+	$(document.body).mousedown(function(e){
 		if(e.button ==0){
 			srcElement = e.srcElement;
 			ctrlPressed = true;
 		}
-	}
+	});
 
 
 
 
 
 	var baseURL = document.baseURI.split("://")[0] + "://bosonnlp.com/analysis/tag";
+	//var baseURL = "http://" + window.location.hostname + "/function_seg/1/";//http://bosonnlp.com/analysis/tag";
 
 	var div = document.createElement("div");
 	div.id = "big_bang_div";
@@ -73,17 +75,18 @@ function initFun()
 	var div_inner = document.createElement("div");
 	div_inner.id = "div_inner";
 	div.appendChild(div_inner);
-	div.oncontextmenu = function ()
+	$(div)
+	.contextmenu(function ()
     {
         return false;
-    }
-    div.onselectstart=function(){
+    })
+    .bind("selectstart",function(){
     	return false;
-    }
+    });
 	
 	function getSecText(){
-	var section = document.getSelection();
-	return section.getRangeAt(0).toString();
+		var section = document.getSelection();
+		return section.getRangeAt(0).toString();
 	}
 
 	function addButtons(div, text){
@@ -137,7 +140,8 @@ function initFun()
 						}
 					}
 				}
-			}).click(function(){
+			})
+			.click(function(){
 
 				if($(this).hasClass("normal_state")){
 					$(this).removeClass("normal_state");
@@ -146,23 +150,23 @@ function initFun()
 					$(this).addClass("normal_state");
 				}
 			});
-			document.getElementById("bb_close_a").onclick = function(){
+			$("#bb_close_a").click(function(){
 				$(div).hide();
 				$(search).hide();
 				div_inner.innerHTML = "";
-			};
+			});
 		});
 		
 
 	}
-	document.body.oncontextmenu = function ()
+	$(document.body).contextmenu(function ()
     {	if(ctrlPressed){
         	return false;
     	}
-    }
+    });
 
     
-	document.body.onmouseup = function(e){
+	$(document.body).mouseup(function(e){
                if(e.button ==2){
                    if(e.srcElement.id == "div_inner" || e.srcElement.parentElement.id == "div_inner"){
                    		
@@ -186,7 +190,7 @@ function initFun()
                }else if(e.button ==1){
                    //alert("你点了滚轮");
                }
-           };
+           });
 
 }
 setTimeout(function(){initFun();},1000);

@@ -23,7 +23,7 @@ position: fixed;
     font-size: 14pt;
     line-height: 1.5;
     z-index: 999999;
-    background: url(http://blkdh.vipsinaapp.com/static/images/pattern.png) repeat,linear-gradient(#D8E5EC,#f3f4f5);
+    background: url(http://blkdh.vipsinaapp.com/static/images/pattern.png) repeat, linear-gradient(#95a5bc, #a9bfdf);
 }
 #div_inner{
 	width: 100%;
