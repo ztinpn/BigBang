@@ -1,9 +1,10 @@
-# wechatFriendsInChatroom
+# Big Bang
+
 #动机
-最近加了一个产品交流的群，发现已经有好友在里面了，好奇会不会有其他好友，几百人的群一个个看肯定不现实，而且搞不好以后还有类似需求，于是就打算代码实现啦。
+纯属娱乐。
 
 #功能
-找出任意微信群里的所有通讯录好友。
+分词，搜索
 
 #用法
 
@@ -13,8 +14,9 @@
 
 此时菜单栏旁边会出现放大镜图标，说明成功载入。
 
-4. 打开微信网页版：[https://wx.qq.com](https://wx.qq.com)
-5. 手机扫描登录后，点击任意群即可在左上方显示，效果如图：
+4. 打开任意页面，选中任意文字后，按照ctrl键不放，按下鼠标右键，即可弹出分词结果；
+5. 分词结果中，可按住鼠标左键滑动进行选择，也可以单独点击单个分词；
+6. 点击左上角的放大镜，即可对所选分词构成的句子进行搜索。
 
-![效果](https://raw.githubusercontent.com/ztinpn/wechatFriendsInChatroom/master/sample.jpg "效果")
+![效果](https://raw.githubusercontent.com/ztinpn/BigBang/master/sample.jpg "效果")
 
